@@ -11,6 +11,18 @@ body {
     font-family: "Work Sans", sans-serif;
 }
 
+.btn-1 {
+  background: none;
+  border: none;
+ 
+}
+
+.btn-1 i {
+  font-size: 22px;
+  align-items: center;
+  
+}
+
 h1,h2,h3,h4,h5,h6,p{
    font-family: "Work Sans", sans-serif;
 }
