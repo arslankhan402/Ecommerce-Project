@@ -1,0 +1,30 @@
+@media (max-width: 992px) {
+    .search-box input {
+        width: 120px !important;
+    }
+}
+
+
+
+@media (max-width: 992px) {
+  .hero-text {
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    padding: 0 10px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .hero-text .btn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+}
