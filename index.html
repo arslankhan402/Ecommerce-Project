@@ -23,6 +23,7 @@
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Teko:400,600" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -72,12 +73,50 @@
               <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-              <p>Cart items will appear here...</p>
+            <div id="cart-items">
+
+              <div class="cart-item">
+                <img src="./assets/lipstick.png" alt="Product 1" class="cart-img">
+                <div class="cart-info">
+                  <h6>Brightening Body Lotion</h6>
+                  <p>Rs 1200</p>
+                  <div class="qty-controls">
+                    <button class="qty-btn" onclick="changeQty(0, -1)">-</button>
+                    <span id="qty-0">1</span>
+                    <button class="qty-btn" onclick="changeQty(0, 1)">+</button>
+                  </div>
+                </div>
+                <button class="remove-btn" onclick="removeItem(0)">Remove</button>
+              </div>
+
+              <div class="cart-item">
+                <img src="./assets/cream@4x-8.png" alt="Product 2" class="cart-img">
+                <div class="cart-info">
+                  <h6>Ultra Smooth Lipstick</h6>
+                  <p>Rs 800</p>
+                  <div class="qty-controls">
+                    <button class="qty-btn" onclick="changeQty(1, -1)">-</button>
+                    <span id="qty-1">2</span>
+                    <button class="qty-btn" onclick="changeQty(1, 1)">+</button>
+                  </div>
+                </div>
+                <button class="remove-btn" onclick="removeItem(1)">Remove</button>
+              </div>
             </div>
+              <div class="cart-summary">
+                <p>Subtotal: Rs <span id="subtotal">2800</span></p>
+                <p class="fw-bold">Total: Rs <span id="total">2800</span></p>
+              </div>
+              <div class="cart-buttons">
+                <button class="btn btn-primary">Checkout</button>
+                <button class="btn btn-outline-secondary">View Cart</button>
+              </div>
+    
           </div>
         </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 
 
     <!-- hero-section -->
