@@ -67,53 +67,22 @@
             <span id="cart-count" class="badge bg-danger position-absolute top-0 start-100 translate-middle rounded-pill px-2 py-1" style="font-size: 10px;">0</span>
           </button>
 
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
             <div class="offcanvas-header">
-              <h5 id="offcanvasRightLabel">Your Cart</h5>
-              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              <h5>Your Cart</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
             </div>
+
             <div class="offcanvas-body">
-            <div id="cart-items">
-
-              <div class="cart-item">
-                <img src="./assets/lipstick.png" alt="Product 1" class="cart-img">
-                <div class="cart-info">
-                  <h6>Brightening Body Lotion</h6>
-                  <p>Rs 1200</p>
-                  <div class="qty-controls">
-                    <button class="qty-btn" onclick="changeQty(0, -1)">-</button>
-                    <span id="qty-0">1</span>
-                    <button class="qty-btn" onclick="changeQty(0, 1)">+</button>
-                  </div>
-                </div>
-                <button class="remove-btn" onclick="removeItem(0)">Remove</button>
+              <ul id="cartItems" class="list-group mb-3"></ul>
+              <div class="d-flex justify-content-between border-top pt-3">
+                <h5>Total:</h5>
+                <h5 id="cartTotal">$0</h5>
               </div>
 
-              <div class="cart-item">
-                <img src="./assets/cream@4x-8.png" alt="Product 2" class="cart-img">
-                <div class="cart-info">
-                  <h6>Ultra Smooth Lipstick</h6>
-                  <p>Rs 800</p>
-                  <div class="qty-controls">
-                    <button class="qty-btn" onclick="changeQty(1, -1)">-</button>
-                    <span id="qty-1">2</span>
-                    <button class="qty-btn" onclick="changeQty(1, 1)">+</button>
-                  </div>
-                </div>
-                <button class="remove-btn" onclick="removeItem(1)">Remove</button>
-              </div>
             </div>
-              <div class="cart-summary">
-                <p>Subtotal: Rs <span id="subtotal">2800</span></p>
-                <p class="fw-bold">Total: Rs <span id="total">2800</span></p>
-              </div>
-              <div class="cart-buttons">
-                <button class="btn btn-primary">Checkout</button>
-                <button class="btn btn-outline-secondary">View Cart</button>
-              </div>
-    
           </div>
-        </div>
+
       </div>
     </div>
   </nav>
@@ -151,7 +120,7 @@
 </div>
 
 
-<!-- Product section -->
+ <!-- Product section  -->
 <div class="container-lg">
   <div class="product ">
     <div class="text-center ">
@@ -160,50 +129,69 @@
               Discover our most-loved skincare essentials for everyday glow.
             </p>
           </div>
-      <div class="row mt-5">
+       <div class="row mt-5">
         <div class="col-lg-3 col-md-6">
           <div class="product-image">
             <img src="./assets/product-1@4x-8.png" alt="">
           </div>
           <div class="section-4">
-          <div class="product-data mt-2 p-2">
-            <h6 class="text-muted">Body Lotion</h6>
-            <h4>Brightening Body Lotion for Soft Radiant Skin</h4>
-          </div>
-          <div class="price d-flex align-items-center justify-content-between p-2">
-            <h4>$175.00</h4>
-            <div class="star d-flex align-items-center gap-1">
-              <i class="bi bi-star-fill"></i>
-              <h5 class="text-muted mb-0">4.5 (28)</h5>
+            <div class="product-data mt-2 p-2">
+              <h6 class="text-muted">Body Lotion</h6>
+              <h4>Brightening Body Lotion for Soft Radiant Skin</h4>
             </div>
-          </div>
-          <div class="cart-btn justify-content-center d-flex mt-3 align-items-center mb-3">
-            <a href="#" class="add-to-cart">Add to cart</a>
 
-          </div>
+            <div class="price d-flex align-items-center justify-content-between p-2">
+              <h4>$129.00</h4>
+              <div class="star d-flex align-items-center gap-1">
+                <i class="bi bi-star-fill"></i>
+                <h5 class="text-muted mb-0">4.5 (28)</h5>
+              </div>
+            </div>
+            <div class="cart-btn justify-content-center d-flex mt-3 align-items-center mb-3">
+                    <a href="#" 
+                      class="add-to-cart btn btn-dark"
+                      data-name="Brightening Body Lotion"
+                      data-price="129"
+                      data-img="./assets/product-1@4x-8.png"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#offcanvasRight">
+                      Add to cart
+                    </a>
+
+            </div>
           </div>
         </div>
 
+
         <div class="col-lg-3 col-md-6">
-          <div class="product-image-2">
+          <div class="product-image">
             <img src="./assets/lipstick.png" alt="">
           </div>
           <div class="section-4">
-          <div class="product-data mt-2 p-2">
-            <h6 class="text-muted">lipstick</h6>
-            <h4>Ultra Smooth Lipstick for Soft Velvety Finish</h4>
-          </div>
-          <div class="price d-flex align-items-center justify-content-between p-2">
-            <h4>$142.00</h4>
-            <div class="star d-flex align-items-center gap-1">
-              <i class="bi bi-star-fill"></i>
-              <h5 class="text-muted mb-0">4.7 (51)</h5>
+            <div class="product-data mt-2 p-2">
+              <h6 class="text-muted">lipstick</h6>
+              <h4>Ultra Smooth Lipstick for Soft Velvety Finish</h4>
             </div>
-          </div>
-          <div class="cart-btn justify-content-center d-flex mt-3 align-items-center mb-3">
-            <a href="#" class="add-to-cart">Add to cart</a>
 
-          </div>
+            <div class="price d-flex align-items-center justify-content-between p-2">
+              <h4>$49.00</h4>
+              <div class="star d-flex align-items-center gap-1">
+                <i class="bi bi-star-fill"></i>
+                <h5 class="text-muted mb-0">4.5 (28)</h5>
+              </div>
+            </div>
+            <div class="cart-btn justify-content-center d-flex mt-3 align-items-center mb-3">
+                    <a href="#" 
+                      class="add-to-cart btn btn-dark"
+                      data-name="lipstick"
+                      data-price="49"
+                      data-img="./assets/lipstick.png"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#offcanvasRight">
+                      Add to cart
+                    </a>
+
+            </div>
           </div>
         </div>
 
@@ -212,44 +200,62 @@
             <img src="./assets/cream@4x-8.png" alt="">
           </div>
           <div class="section-4">
-          <div class="product-data mt-2 p-2">
-            <h6 class="text-muted">Cream</h6>
-            <h4>Hydrating Face Cream for Soft Glowing Skin</h4>
-          </div>
-          <div class="price d-flex align-items-center justify-content-between p-2">
-            <h4>$392.00</h4>
-            <div class="star d-flex align-items-center gap-1">
-              <i class="bi bi-star-fill"></i>
-              <h5 class="text-muted mb-0">4.2 (31)</h5>
+            <div class="product-data mt-2 p-2">
+              <h6 class="text-muted">Cream</h6>
+              <h4>Hydrating Face Cream for Soft Glowing Skin</h4>
             </div>
-          </div>
-          <div class="cart-btn justify-content-center d-flex mt-3 align-items-center mb-3">
-            <a href="#" class="add-to-cart">Add to cart</a>
 
-          </div>
+            <div class="price d-flex align-items-center justify-content-between p-2">
+              <h4>$420.00</h4>
+              <div class="star d-flex align-items-center gap-1">
+                <i class="bi bi-star-fill"></i>
+                <h5 class="text-muted mb-0">4.5 (28)</h5>
+              </div>
+            </div>
+            <div class="cart-btn justify-content-center d-flex mt-3 align-items-center mb-3">
+                    <a href="#" 
+                      class="add-to-cart btn btn-dark"
+                      data-name="Cream"
+                      data-price="420"
+                      data-img="./assets/cream@4x-8.png"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#offcanvasRight">
+                      Add to cart
+                    </a>
+
+            </div>
           </div>
         </div>
 
         <div class="col-lg-3 col-md-6">
           <div class="product-image">
-            <img src="./assets/Asset 1@4x-8.png" alt="">
+            <img src="./assets/serum@4x-8.png" alt="">
           </div>
           <div class="section-4">
-          <div class="product-data mt-2 p-2">
-            <h6 class="text-muted">Serum</h6>
-            <h4>Vitamin C Serum for Clear Even Tone - 17ml</h4>
-          </div>
-          <div class="price d-flex align-items-center justify-content-between p-2">
-            <h4>$99.00</h4>
-            <div class="star d-flex align-items-center gap-1">
-              <i class="bi bi-star-fill"></i>
-              <h5 class="text-muted mb-0">4.9 (19)</h5>
+            <div class="product-data mt-2 p-2">
+              <h6 class="text-muted">Serum</h6>
+              <h4>Vitamin C Serum for Clear Even Tone - 17ml</h4>
             </div>
-          </div>
-          <div class="cart-btn justify-content-center d-flex mt-3 align-items-center mt-">
-            <a href="#" class="add-to-cart">Add to cart</a>
 
-          </div>
+            <div class="price d-flex align-items-center justify-content-between p-2">
+              <h4>$290.00</h4>
+              <div class="star d-flex align-items-center gap-1">
+                <i class="bi bi-star-fill"></i>
+                <h5 class="text-muted mb-0">4.5 (28)</h5>
+              </div>
+            </div>
+            <div class="cart-btn justify-content-center d-flex mt-3 align-items-center mb-3">
+                    <a href="#" 
+                      class="add-to-cart btn btn-dark"
+                      data-name="Serum"
+                      data-price="290"
+                      data-img="./assets/serum@4x-8.png"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#offcanvasRight">
+                      Add to cart
+                    </a>
+
+            </div>
           </div>
         </div>
       </div>
@@ -258,12 +264,7 @@
 
   
 
-    <script src="about.js"></script>
-
-   <script>
-    
-</script>
-
+    <script src="./about.js"></script>
 
 </body>
 </html>
