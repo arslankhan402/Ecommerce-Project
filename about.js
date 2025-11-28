@@ -1,3 +1,5 @@
+//Off-canvas product update
+
 let cart = [];
 let cartList = document.getElementById("cartItems");
 let cartTotal = document.getElementById("cartTotal");
@@ -9,7 +11,6 @@ document.querySelectorAll(".add-to-cart").forEach(btn => {
         let price = parseFloat(this.getAttribute("data-price"));
         let img = this.getAttribute("data-img");
 
-       
         let existing = cart.find(item => item.name === name);
 
         if (existing) {
@@ -26,6 +27,7 @@ document.querySelectorAll(".add-to-cart").forEach(btn => {
         renderCart();
     });
 });
+
 
 function renderCart() {
     cartList.innerHTML = "";
@@ -84,7 +86,8 @@ function removeItem(i) {
 
 
 
-//
+//Counting
+
 let shoppingCart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
 let cartItemsContainer = document.getElementById("cartItems");
 let cartTotalAmount = document.getElementById("cartTotal");
@@ -168,3 +171,12 @@ function removeItem(i) {
     shoppingCart.splice(i, 1);
     saveAndRender();
 }
+
+
+
+
+
+
+
+
+
